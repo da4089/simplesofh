@@ -20,6 +20,7 @@ class Variant(Enum):
     # Proprietary CME iLink 3.0 protocol version
     CME_SOFH_3_0 = 3
 
+
 def get_message(variant: Variant, **kargs):
     """Get a message configured for the specified protocol variant.
 

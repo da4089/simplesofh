@@ -22,7 +22,7 @@ class CmeMessage(base.Message):
 
     def _set_message_type(self, message_type: int):
         assert message_type >= 0
-        assert message_type <= 0xff
+        assert message_type <= 0xffff
         assert len(self.buffer) >= self.header_length
 
         self.buffer[2:4] = struct.pack('<H', message_type)
