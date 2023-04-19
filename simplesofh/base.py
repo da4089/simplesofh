@@ -7,7 +7,7 @@ from typing import Optional
 class Message:
     """Base class for decoded messages."""
 
-    def __init__(self):
+    def __init__(self, **kargs):
         self.buffer = bytearray()
         self.header_length = 0
 
@@ -48,7 +48,7 @@ class Message:
 class Decoder:
     """SOFH decoder base class."""
 
-    def __init__(self):
+    def __init__(self, **kargs):
         self.buffer = bytearray()
 
     def append_bytes(self, buffer: [bytes | bytearray | memoryview]):

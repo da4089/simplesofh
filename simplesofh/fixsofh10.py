@@ -9,8 +9,8 @@ import struct
 
 class V10Message(base.Message):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **kargs):
+        super().__init__(**kargs)
         self.header_length = 6
 
     def _set_length(self, length: int):
@@ -42,8 +42,8 @@ class V10Message(base.Message):
 
 class V10Decoder(base.Decoder):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **kargs):
+        super().__init__(**kargs)
         self.length = 0
 
     def get_message(self) -> Optional[bytearray]:
