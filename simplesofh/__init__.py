@@ -11,14 +11,14 @@ from enum import Enum
 class Variant(Enum):
     """Protocol variant."""
 
-    # Official FIX Trading Community protocol version 1.0
     FIX_SOFH_1_0 = 1
+    """Official FIX Trading Community protocol version 1.0"""
 
-    # Official FIX Trading Community protocol version 1.1
     FIX_SOFH_1_1 = 2
+    """Official FIX Trading Community protocol version 1.1"""
 
-    # Proprietary CME iLink 3.0 protocol version
     CME_SOFH_3_0 = 3
+    """Proprietary CME iLink 3.0 protocol version"""
 
 
 def get_message(variant: Variant, **kargs):
